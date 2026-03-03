@@ -140,7 +140,7 @@ if page == "Dashboard":
             xaxis_tickangle=-45,
             height=400
         )
-        st.plotly_chart(fig_r2, width='stretch')
+        st.plotly_chart(fig_r2, use_container_width=True)
     
     with col2:
         fig_rmse = go.Figure(data=[
@@ -153,7 +153,7 @@ if page == "Dashboard":
             xaxis_tickangle=-45,
             height=400
         )
-        st.plotly_chart(fig_rmse, width='stretch')
+        st.plotly_chart(fig_rmse, use_container_width=True)
     
     st.markdown("---")
     
@@ -212,7 +212,7 @@ elif page == "Data Analysis":
         height=500,
         showlegend=False
     )
-    st.plotly_chart(fig_industry, width='stretch')
+    st.plotly_chart(fig_industry, use_container_width=True)
     
     st.markdown("---")
     
@@ -231,7 +231,7 @@ elif page == "Data Analysis":
             color_continuous_scale='Blues'
         )
         fig_city.update_layout(height=400, showlegend=False)
-        st.plotly_chart(fig_city, width='stretch')
+        st.plotly_chart(fig_city, use_container_width=True)
     
     with col2:
         st.subheader("💰 Investment Type Distribution")
@@ -242,7 +242,7 @@ elif page == "Data Analysis":
             hole=0.4
         )
         fig_investment.update_layout(height=400)
-        st.plotly_chart(fig_investment, width='stretch')
+        st.plotly_chart(fig_investment, use_container_width=True)
     
     st.markdown("---")
     
@@ -275,7 +275,7 @@ elif page == "Data Analysis":
         height=500,
         hovermode='x unified'
     )
-    st.plotly_chart(fig_trends, width='stretch')
+    st.plotly_chart(fig_trends, use_container_width=True)
     
     st.markdown("---")
     
@@ -356,7 +356,7 @@ elif page == "Make Prediction":
                 help="Select the type of funding round"
             )
         
-        submitted = st.form_submit_button("🚀 Predict Funding", width='stretch')
+        submitted = st.form_submit_button("🚀 Predict Funding", use_container_width=True)
     
     if submitted:
         # Create DataFrame
@@ -424,7 +424,7 @@ elif page == "Make Prediction":
             showlegend=False
         )
         
-        st.plotly_chart(fig, width='stretch')
+        st.plotly_chart(fig, use_container_width=True)
         
         # Statistics
         st.markdown("---")
